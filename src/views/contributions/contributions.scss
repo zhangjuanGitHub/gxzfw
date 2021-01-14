@@ -1,0 +1,59 @@
+.issuedetail .commentBox .el-textarea {
+    display: block;
+    width: 1010px;
+    margin: 27px auto;
+  }
+.issue-form .el-input, .issue-form .el-textarea {
+  width: 910px;
+}
+.el-textarea__inner {
+  border-radius: 0;
+}
+.issueInvite .el-input, .small-width .el-input {
+  width: 260px;
+}
+.media .activeClass {
+  color: #2baf0c;
+}
+.media .errorClass {
+  color: #f10909;
+}
+.breadcrumb-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.media h2 span {
+  font-size: 16px;
+  font-family: DengXian-Regular;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+  line-height: 49px;
+  padding-left: 9px;
+}
+.media h2 span:first-of-type::before {
+  content: "";
+  width: 4px;
+  background-color: #32a1f5;
+  height: 17px;
+  float: left;
+  margin-top: 15px;
+}
+.media .roter {
+  color: rgba(47, 159, 243, 1);
+  float: right;
+  cursor: pointer;
+}
+.keys .el-form-item {
+  margin-bottom: 0;
+}
+.keys .el-form-item__content {
+  height: 40px;
+}
+.keys .el-form {
+  display: flex;
+  justify-content: space-between;
+}
+.IaunchLssue .el-form-item__label, .launchVisit .el-form-item__label {
+  font-size: 16px;
+}

@@ -1,0 +1,48 @@
+.demo-form-inline .el-form-item:last-child {
+  float: inherit;
+}
+.demo-form-inline .plat-seach .el-input {
+  width: 200px;
+}
+.addAccount .el-input {
+  width: 350px;
+}
+.review-num-search .el-date-editor {
+  width: 300px;
+}
+.assess-set .el-input__inner {
+  padding: 0 3px;
+}
+.account-num-span {
+  font-size: 16px;
+  letter-spacing: 1.2px;
+}
+.account-num-span i {
+  color: #409eff;
+}
+.review-num-search {
+  height: 46px;
+  background: rgba(239, 241, 244, 1);
+  padding: 3px 12px;
+  box-sizing: border-box;
+}
+.user-dialog .el-table th {
+  background: transparent;
+}
+.el-page-header__left {
+  transition: all 0.2s linear;
+}
+.Matrix .el-page-header:hover .el-page-header__left,
+.review-num .el-page-header:hover .el-page-header__left {
+  color: #409eff;
+}
+.addAccount .el-form-item__label {
+  font-size: 16px;
+}
+.assessment-box .el-table .cell {
+  white-space: pre-line;
+}
+.region-export {
+  margin-bottom: 10px;
+  float: right;
+}

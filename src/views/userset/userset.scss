@@ -1,0 +1,44 @@
+.user-form-box .el-input {
+  width: 380px;
+}
+.admin-form-box .el-form-item__label,
+.user-form-box .el-form-item__label {
+  font-size: 16px;
+  color: #333333;
+}
+/**
+* @desc 个人中心上传
+* @author weipeng
+* @date 2019-05-22 17:59:32
+*/
+.user-box .el-input,
+.user-box .el-textarea {
+  width: 380px;
+}
+.user-box .el-textarea__inner {
+  border-radius: 0;
+}
+.details-dialog .el-dialog__body {
+  padding: 0;
+}
+.details-dialog .el-dialog__header {
+  background: #f7f7f7;
+  border-bottom: 1px solid #e6e6e6;
+  height: 40px;
+}
+.details-dialog .el-dialog__headerbtn {
+  top: 11px;
+}
+.details-dialog .el-image {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+}
+.admin-tree .el-tree .el-tree-node__label {
+  font-size: 16px;
+  display: block;
+  width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

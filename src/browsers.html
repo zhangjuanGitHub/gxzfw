@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>升级浏览器</title>
+    <link rel="icon" href="favicon.ico" />
+    <style>
+      .Browsers {
+        width: 100%;
+        margin: auto;
+      }
+      .wrapper {
+        text-align: center;
+      }
+      .wrapper-title {
+        font-size: 32px;
+        color: #222222;
+        line-height: 45px;
+        margin-bottom: 20px;
+      }
+      .wrapper-purpose {
+        font-size: 18px;
+        color: #999999;
+      }
+      .choose-browsers {
+        padding-top: 60px;
+      }
+      .click-browsers {
+        width: 100%;
+        margin: 0 auto;
+        /* display: flex; */
+      }
+      .margin-wrapper {
+        width: 33%;
+        float: left;
+        text-align: center;
+      }
+      .browsers-img {
+        width: 114px;
+        height: 100%;
+        cursor: pointer;
+      }
+      .choose-desc {
+        text-align: center;
+        margin: 25px 0 0 0;
+        font-size: 24px;
+        color: #666666;
+        line-height: 33px;
+      }
+      .margin-wrapper:hover .choose-desc {
+        color: #ff5a5f;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="Browsers">
+      <div class="wrapper">
+        <p class="wrapper-title">请使用更先进的浏览器</p>
+        <p class="wrapper-purpose">我们使用最新技术为您更流畅的体验</p>
+      </div>
+      <div class="choose-browsers">
+        <div class="click-browsers">
+          <div class="margin-wrapper">
+            <a
+              href="https://support.microsoft.com/zh-cn/help/17621/internet-explorer-downloads"
+              ><img src="./img/IE.png" alt="IE" class="browsers-img"
+            /></a>
+            <p class="choose-desc">IE</p>
+          </div>
+
+          <div class="margin-wrapper Chrome">
+            <a href="https://www.google.cn/chrome/"
+              ><img src="./img/chrome.png" alt="Chrome" class="browsers-img"
+            /></a>
+            <p class="choose-desc">Chrome</p>
+          </div>
+
+          <div class="margin-wrapper">
+            <a href="http://www.firefox.com.cn/download/"
+              ><img src="./img/firefox.png" alt="Firefox" class="browsers-img"
+            /></a>
+            <p class="choose-desc">Firefox</p>
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </body>
+</html>

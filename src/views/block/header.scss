@@ -1,0 +1,21 @@
+.header-wrap .el-menu--horizontal > .el-menu-item {
+  font-size: 16px;
+}
+.header-wrap .el-menu--horizontal > .el-menu-item:focus {
+  background: transparent;
+}
+.header-wrap .el-menu--horizontal > .el-menu-item:not(.is-disabled):hover,
+.el-menu--horizontal > .el-submenu .el-submenu__title:hover,
+.header-wrap .el-menu--horizontal > .el-menu-item.is-active {
+  background: rgb(238, 146, 110);
+  color: #fff;
+}
+.header-right .el-badge__content.is-fixed {
+  right: 10px;
+}
+.header-wrap .el-dialog__wrapper{
+  z-index: 20042 !important;
+}
+.header-wrap .v-modal{
+  z-index: 20041 !important;
+}

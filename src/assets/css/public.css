@@ -1,0 +1,190 @@
+.is-active {
+  color: #2c8ae5;
+}
+.el-dropdown-menu__item.is-active {
+  color: #2c8ae5;
+}
+body,
+html {
+  height: 100%;
+  overflow-anchor: none;
+}
+html::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+}
+ /* 设置滚动条的样式 */
+ .monitor-table .el-table__body-wrapper::-webkit-scrollbar,
+ .lc-container::-webkit-scrollbar {
+  display: block;
+  width:12px;
+  }
+  .monitor-table .el-table__body-wrapper::-webkit-scrollbar {
+    background-color: #eeee;
+  }
+  /* 滚动槽 */
+  .monitor-table .el-table__body-wrapper::-webkit-scrollbar-track,
+  .lc-container::-webkit-scrollbar-track {
+  border-radius:5px;
+  }
+  /* 滚动条滑块 */
+  .monitor-table .el-table__body-wrapper::-webkit-scrollbar-thumb,
+  .lc-container::-webkit-scrollbar-thumb {
+  border-radius:5px;
+  background:#aaaaaa;
+  }
+.container {
+  width: 1314px;
+  min-height: calc(100vh - 140px);
+  margin: 0 auto;
+  padding: 22px 26px 58px;
+  box-sizing: content-box;
+}
+.lin-clamp-1 {
+  display: -webkit-box;
+  /* autoprefixer: off*/
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  height: 32px;
+  line-height: 32px;
+  text-overflow: ellipsis;
+}
+.lin-clamp-1 span,
+.lin-clamp-3 span,
+.media_highlight span {
+  color: #ff0000;
+}
+.media_highlight a span {
+  color: #333;
+}
+.overHidden {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.lin-clamp-3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* .margin-none {
+  margin: 0 !important;
+} */
+
+.breadcrumb-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.margin-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: auto;
+}
+.min-height {
+  min-height: 100vh;
+}
+
+/**
+* @desc 系统管理
+* @author weipeng
+* @date 2019-05-14 18:21:24
+*/
+.admin-search {
+  display: flex;
+  justify-content: space-between;
+}
+.admin-search .el-button {
+  border-radius: 0;
+}
+.admin-log {
+  display: flex;
+  align-items: center;
+}
+.admin-log-p:before {
+  width: 4px;
+  height: 16px;
+  position: absolute;
+  content: '';
+  z-index: -1;
+  background: #2f9ff3;
+}
+.admin-log-span {
+  display: block;
+  font-size: 16px;
+  color: #333333;
+  margin-left: 12px;
+}
+.admin-form-box {
+  min-height: 500px;
+  padding: 20px;
+  background: #ffffff;
+}
+
+/**
+* @desc 后台管理
+* @author weipeng
+* @date 2019-05-15 10:56:40
+*/
+.admin-btn-box .el-button {
+  width: 100px;
+  height: 38px;
+  font-size: 16px;
+  padding: 0;
+}
+.admin-btn-box {
+  padding: 70px 0 70px 76px;
+  text-align: left;
+}
+.dataless {
+  text-align: center;
+  margin-top: 20px;
+}
+.no-permission {
+  padding: 50px 0px;
+}
+.no-permission p {
+  font-size: 16px;
+  margin-top: 20px;
+}
+.cursor {
+  cursor: pointer;
+}
+.color-blue{
+  color: #00AFFF !important;
+}
+.color-red{
+  color: #F56C6C !important;
+}
+.color-yellow{
+  color: #E6A23C !important;
+}
+.color-cyan{
+  color:#909399 !important;
+}
+.color-greed{
+  color: #67C23A !important;
+}
+.text-click{
+  color: #409eff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.edui-popup-content .edui-default * {
+  display: flex !important;
+  flex-wrap: wrap !important;
+}

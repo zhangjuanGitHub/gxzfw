@@ -1,0 +1,200 @@
+.el-table th {
+  background: linear-gradient(0deg,#f3f2f2,#fff);
+  color: #333;
+  /* background: linear-gradient(0deg, #35a4f8, #50aef7, #7ac5ff);
+  color: #fff; */
+}
+.message-list .el-table th{
+  background: linear-gradient(0deg,#f3f2f2,#fff);
+  color: #333;
+}
+.assessment-box .el-table th {
+  background-color:#F5F7FA;
+  color:#333;
+}
+.big-table .el-table th{
+  background: linear-gradient(0deg, #35a4f8, #50aef7, #7ac5ff);
+  color: #fff;
+}
+.aside-menu-style{
+  border: none;
+}
+.el-table .cell {
+  text-align: center;
+}
+.el-input__inner,
+.el-textarea__inner,
+.el-button {
+  border-radius: 0;
+}
+.el-menu--horizontal > .el-menu-item.is-active,
+.el-menu--horizontal > .el-menu-item {
+  border-bottom: 0;
+}
+.assessment .el-menu-item.is-active::before,
+.user-box .el-menu-item.is-active::before,
+.bigData-box .bigdata-menu.is-active::before,
+.admin-box .el-menu-item.is-active::before,
+.hotnews-box .el-menu-item.is-active::before,
+.user-book-box .el-menu-item.is-active::before {
+  content: '';
+  margin-left: -20px;
+  float: left;
+  width: 5px;
+  height: 100%;
+  background-color: #3875f0;
+}
+.assessment-book .el-menu-item-group .el-menu-item.is-active::before,
+.bigData-box .el-menu-item-group .el-menu-item.is-active::before,
+.hotnews-box .el-menu-item-group .el-menu-item.is-active::before {
+  content: '';
+  margin-left: -40px;
+  float: left;
+  width: 5px;
+  height: 100%;
+  background-color: #3875f0;
+}
+.el-table__header,
+.el-table__body,
+.el-table__empty-block {
+  width: auto !important;
+  border-collapse: collapse;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+body {
+  cursor: auto !important;
+}
+html {
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  -moz-overflow:scrollbars-none;
+  scrollbar-width: none;
+}
+.el-message {
+  top: 60px !important;
+}
+.el-form--inline .el-form-item:last-child {
+  margin-right: 0;
+}
+.el-table__row:nth-of-type(even) {
+  background: #f8fcff;
+}
+/*表格溢出隐藏*/
+.el-tooltip__popper.is-dark {
+  max-width: 30%;
+}
+/*表格操作，删除编辑*/
+.disflex {
+  display: flex;
+}
+.edit-click {
+  font-size: 14px;
+  color: #70ade4;
+  cursor: pointer;
+  margin-right: 15px;
+}
+.delete-click {
+  font-size: 14px;
+  cursor: pointer;
+  color: #f56c6c;
+}
+.admin-box .el-tree-node__label {
+  font-size: 16px;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.el-popup-parent--hidden{
+  padding: 0 !important;
+}
+.edui-default .edui-for-xiumi-connect iframe{
+  height: 100%;
+}
+/*节日介绍*/
+.pimg img {
+  width: 100%;
+}
+.festival-cont p {
+  text-indent: 30px;
+  line-height: 20px;
+}
+.festival-cont .pimg {
+  text-indent: 0;
+  margin: 10px 0;
+}
+.festival-cont h3 {
+  margin: 10px 0;
+}
+/* 重大节日日历字体 */
+.major-cont .el-tooltip {
+  font-size: 16px;
+  display: -webkit-box;
+  /* autoprefixer: off*/
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 20px;
+}
+/* 历史上的今天上传 */
+.user-upload-box .el-image {
+  height: 220px;
+}
+.user-upload-box .el-upload-dragger {
+  background-color: #fff;
+  border: 1px dashed #d9d9d9;
+  border-radius: 6px;
+  box-sizing: border-box;
+  width: 220px;
+  height: 220px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* 选择登陆页 */
+.swith-login .el-timeline-item__content p {
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+}
+.swith-login .el-timeline-item {
+  height: 40px;
+}
+.aside-display .el-button .el-tooltip{
+  color: #ffffff;
+}
+.aside-display .check-collapse-close{
+  background-color: #545c64;
+}
+.aside-display .el-submenu__title i {
+  color: #fff;
+}
+.aside-display .el-menu-item i {
+  color: #fff;
+}
+#app .el-menu--collapse .el-submenu .el-submenu__title .el-submenu__icon-arrow {
+  display: none;
+}
+#app .el-menu--collapse .el-menu-item-group .el-submenu:first-of-type>.el-submenu__title>span {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  visibility: hidden;
+  display: inline-block;
+}
+.folderSet .avatar-uploader-icon,
+.uploud-cover .avatar-uploader-icon,
+.contri-upload .avatar-uploader-icon,
+.contri-img-cover .avatar-uploader-icon {
+  font-size: 30px;
+  margin-top: 75px;
+}
+.dis-flex{
+  display: flex;
+}

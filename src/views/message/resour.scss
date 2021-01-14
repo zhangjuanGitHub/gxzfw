@@ -1,0 +1,369 @@
+.Picturebox .el-input .el-input__inner {
+  border-radius: 0;
+}
+.Picturebox .image-box .el-image {
+  width: 320px;
+}
+.Picturebox .el-date-editor.el-input {
+  width: 120px;
+}
+.Picturebox .el-range-editor.el-input__inner {
+  width: 300px;
+  border-radius: 0;
+  line-height: 22px;
+  padding-right: 0px;
+}
+.Picturebox .el-date-editor .el-range__icon {
+  line-height: 20px;
+}
+.Picturebox .el-date-editor .el-range-separator {
+  line-height: 22px;
+}
+.Picturebox .el-date-editor .el-range__close-icon {
+  line-height: 22px;
+}
+.Picturebox .el-form .el-form-item {
+  margin-right: 5px;
+  margin-bottom: 0px;
+}
+.Picturebox .el-date-editor .el-input__inner {
+  padding-left: 25px;
+  width: 120px;
+}
+.Picturebox .el-date-editor .el-input__suffix {
+  right: 0px;
+}
+.Picturebox .el-form .el-form-item__label {
+  padding-right: 10px;
+}
+.Picturebox .el-checkbox {
+  margin-right: 5px;
+}
+.Picturebox .el-button {
+  width: 70px;
+  height: 29px;
+  border-radius: 0;
+  padding: 0px;
+}
+.Picturebox .operation .el-button {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  font-size: 16px;
+  color: #fff;
+}
+.Picturebox .operation .el-button:last-child {
+  background-color: #c86cdf;
+}
+.Picturebox .el-input.is-disabled .el-input__inner {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  text-align: left;
+}
+.Picturebox .my-image-list .el-input input {
+  width: 80%;
+  font-size: 14px;
+  color: #606266;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.Picturebox .my-image-list .el-input__icon {
+  line-height: 30px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.Picturebox .Picturebox-seach .el-input,
+.videobox .videobox-seach .el-input {
+  width: 125px;
+}
+.videobox .el-input .el-input__inner {
+  border-radius: 0;
+  text-align: left;
+}
+.videobox .el-date-editor.el-input {
+  width: 120px;
+}
+.videobox .el-range-editor.el-input__inner {
+  width: 300px;
+  border-radius: 0;
+  line-height: 22px;
+  padding-right: 0px;
+}
+.videobox .el-date-editor .el-range__icon {
+  line-height: 20px;
+}
+.videobox .el-date-editor .el-range-separator {
+  line-height: 22px;
+}
+.videobox .el-date-editor .el-range__close-icon {
+  line-height: 22px;
+}
+.videobox .el-form--inline .el-form-item {
+  margin-right: 5px;
+  margin-bottom: 0px;
+}
+.videobox .el-date-editor .el-input__inner {
+  padding-left: 25px;
+  width: 120px;
+}
+.videobox .el-form .el-form-item__label {
+  padding-right: 10px;
+}
+.videobox .el-date-editor .el-input__suffix {
+  right: 0px;
+}
+.videobox .el-checkbox {
+  margin-right: 5px;
+}
+.videobox .el-button {
+  width: 70px;
+  height: 29px;
+  border-radius: 0;
+  padding: 0px;
+}
+.videobox .operation .el-button {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  font-size: 16px;
+  color: #fff;
+}
+.videobox .operation .el-button:last-child {
+  background-color: #c86cdf;
+}
+.videobox .el-input.is-disabled .el-input__inner {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+.videobox .my-video-list .el-input input {
+  width: 80%;
+  font-size: 14px;
+  color: #606266;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.videobox .my-video-list .el-input__icon {
+  line-height: 30px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.upload-img .el-upload-dragger {
+  width: 146px;
+  height: 146px;
+}
+.img-box .el-card {
+  min-height: 278px;
+}
+.my-img-list .el-input__inner {
+  padding: 0 10px;
+}
+.upload-video-box .el-upload-dragger {
+  width: 380px;
+}
+//.upload-video-box .my-img-list .el-input__inner {
+//  border: none;
+//}
+.upload-video-box .upload-video-detail .el-input {
+  width: 29%;
+}
+.upload-img .el-upload-dragger {
+  width: auto;
+  height: auto;
+  border: none;
+}
+.slider-box .el-slider__runway {
+  height: 38px;
+  position: absolute;
+  z-index: 2;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+.slider-box .el-slider__button-wrapper {
+  top: 0;
+}
+.demo-form-inline .el-form-item:last-child {
+  float: right;
+}
+.demo-form-inline .plat-seach .el-input {
+  width: 200px;
+}
+.addAccount .el-input {
+  width: 350px;
+}
+.review-num-search .el-date-editor {
+  width: 300px;
+}
+.assess-set .el-input__inner {
+  padding: 0 3px;
+}
+.account-num-span {
+  font-size: 16px;
+  letter-spacing: 1.2px;
+}
+.account-num-span i {
+  color: #409eff;
+  font-style: normal;
+  text-decoration: underline;
+  cursor: pointer;
+  margin: 0 5px;
+}
+.review-num-search {
+  height: 46px;
+  background: rgba(239, 241, 244, 1);
+  padding: 3px 12px;
+  box-sizing: border-box;
+}
+.user-dialog .el-table th {
+  background: transparent;
+}
+.el-page-header__left {
+  transition: all 0.2s linear;
+}
+.Matrix .el-page-header:hover .el-page-header__left,
+.review-num .el-page-header:hover .el-page-header__left {
+  color: #409eff;
+}
+.addAccount .el-form-item__label {
+  font-size: 16px;
+}
+.AssessHead .el-tabs,
+.manage-cont .el-tabs {
+  min-height: 500px;
+}
+.picture-detail .img-box .upload-demo {
+  padding: 0 18px;
+}
+.picture-detail .img-box .el-upload {
+  width: 300px;
+  height: 280px;
+}
+.picture-detail .el-upload-dragger .el-icon-upload {
+  font-size: 129px;
+  margin-top: 80px;
+  display: block;
+}
+.picture-detail .upload-img .el-upload-dragger {
+  height: 275px;
+}
+.picture-detail .el-upload-list--picture-card .el-upload-list__item {
+  width: 300px;
+  height: 285px;
+  margin-right: 25px;
+}
+.picture-detail .el-upload__tip {
+  text-align: center;
+}
+.tabs-card {
+  display: flex;
+  background-color: #f5f7fa;
+  border-bottom: 1px solid #e4e7ed;
+  margin: 0;
+}
+.card-name a {
+  display: inline-block;
+  padding: 0 20px;
+  height: 40px;
+  border-right: 1px solid #e4e7ed;
+  box-sizing: border-box;
+  line-height: 40px;
+  display: inline-block;
+  list-style: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #303133;
+  position: relative;
+}
+.card-name .is-active {
+  color: #2c8ae5;
+  background-color: #fff;
+  border-bottom-color: transparent;
+}
+.card-name img {
+  vertical-align: middle;
+  margin-right: 5px;
+  margin-top: -3px;
+}
+.card-name span {
+  line-height: 33px;
+}
+.manage-cont {
+  width: 1104px;
+  float: right;
+  min-height: 500px;
+  background-color: #fff;
+  border: 1px solid #e4e7ed;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 6px 0 rgba(0, 0, 0, 0.04);
+}
+.department-detail .el-image img {
+  width: 30px;
+  height: 30px;
+}
+.ranking-box .el-form-item {
+  margin-bottom: 0;
+}
+.cover-box {
+  width: 255px;
+  height: 168px;
+  margin-right: 32px;
+  background: #f5f5f5;
+  position: relative;
+}
+.cover-box img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: auto;
+  max-height: 100%;
+}
+.message-list-box .el-date-editor .el-input__inner {
+  padding: 0 13px;
+}
+
+.contribute-detail .el-input__inner {
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid #dcdfe6;
+  color: #2394e9;
+}
+
+.title-box .el-input__inner,
+.title-box .el-input__inner:focus {
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid #dcdfe6;
+  color: #333333;
+  font-size: 22px;
+}
+.cross-editor .edui-default .edui-toolbar .edui-for-xiumi-connect .edui-icon {
+  background-image: url(http://xiumi.us/connect/ue/xiumi-connect-icon.png) !important;
+  background-position: 2px 2px;
+}
+.warrant .el-checkbox-group .el-checkbox {
+  width: 25%;
+}
+.account-box .el-dialog .el-dialog__body {
+  height: 400px;
+  overflow-y: scroll;
+}
+.account-box .el-dialog .el-dialog__body::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+}
+.account-box .el-dialog .el-dialog__body::-webkit-scrollbar-thumb {
+  width: 10px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #000;
+}

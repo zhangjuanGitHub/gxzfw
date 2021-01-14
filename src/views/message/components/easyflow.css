@@ -1,0 +1,190 @@
+.easy-msg {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.easy-btn {
+  margin-right: 60px;
+}
+.easy-text {
+  padding: 0 20px;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.easy-text p {
+  height: 30px;
+  line-height: 30px;
+  background: gold;
+  font-weight: bold;
+  font-size: 17px;
+  padding: 2px 10px;
+  text-align: center;
+}
+.easyWidth {
+  width: 280px;
+}
+.easy-dialog {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  overflow: scroll;
+}
+.easy-back {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.easy-part {
+  width: 25%;
+  height: 100%;
+}
+.easy-back div:nth-of-type(1) {
+  background: #cccccc;
+}
+.easy-back div:nth-of-type(2) {
+  /* background: #E6A23C; */
+  background: linear-gradient(
+      90deg,
+      rgb(250, 224, 178),
+      rgb(224, 176, 72),
+      rgb(226, 187, 58)
+    );
+}.easy-back div:nth-of-type(3) {
+  /* background: #409eff; */
+  background: linear-gradient(
+      90deg,
+      rgb(140, 209, 212),
+      rgb(39, 179, 214),
+      rgb(85, 193, 207)
+    );
+}.easy-back div:nth-of-type(4) {
+  /* background: rgb(129, 228, 79); */
+  background: linear-gradient(
+      90deg,
+      rgb(160, 209, 135),
+      rgb(92, 201, 38),
+      rgb(142, 211, 108),
+  );
+}
+.easy-part p {
+  padding-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+#efContainer {
+  width: 100%;
+  height: calc(100% - 28px);
+  position: absolute;
+  left: 0;
+  top: 28px;
+  overflow: scroll;
+}
+
+/*节点的最外层容器*/
+.ef-node-container {
+  position: absolute;
+  display: flex;
+  width: 120px;
+  height: 40px;
+  border: 1px solid #E0E3E7;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+/*节点左侧的竖线*/
+.ef-node-left {
+  width: 4px;
+  background-color: #1879FF;
+  border-radius: 4px 0 0 4px;
+}
+
+/*节点左侧的图标*/
+.ef-node-left-ico {
+  line-height: 40px;
+  font-size: 20px;
+  margin-left: 5px;
+}
+
+/*节点显示的文字*/
+.ef-node-text {
+  color: #565758;
+  font-size: 17px;
+  line-height: 40px;
+  margin-left: 4px;
+  flex: 1;
+  /* width: 80px; */
+  /* 设置超出宽度文本显示方式*/
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+/*节点右侧的图标*/
+.ef-node-right-ico {
+  line-height: 40px;
+  font-size: 16px;
+  position: absolute;
+  right: 5px;
+  color: #84CF65;
+  cursor: default;
+}
+
+/*节点的几种状态样式*/
+.el-node-state-success {
+  line-height: 40px;
+  position: absolute;
+  right: 5px;
+  color: #84CF65;
+  cursor: default;
+}
+
+.el-node-state-error {
+  line-height: 40px;
+  position: absolute;
+  right: 5px;
+  color: #F56C6C;
+  cursor: default;
+}
+
+.el-node-state-warning {
+  line-height: 40px;
+  position: absolute;
+  right: 5px;
+  color: #E6A23C;
+  cursor: default;
+}
+
+.el-node-state-running {
+  line-height: 40px;
+  position: absolute;
+  right: 5px;
+  color: #84CF65;
+  cursor: default;
+}
+
+/* 连线中的label 样式*/
+.jtk-overlay.flowLabel:not(.aLabel) {
+  /* width: 170px; */
+  padding: 4px 7px;
+  font-size: 13px !important;
+  background-color: white;
+  color: #565758 !important;
+  border: 1px solid #E0E3E7;
+  border-radius: 5px;
+}
+
+/* label 为空的样式 */
+/* .emptyFlowLabel {
+} */
+
+.easy-process .el-dialog__body {
+  padding: 15px 20px;
+}

@@ -1,0 +1,15 @@
+/*可以在这里添加你自己的css*/
+.ueditor .edui1_iframeholder .view{
+  height: 500px;
+}
+img{
+  max-width: 100%;
+}
+.view{
+  word-break: break-all;
+  height: 98%;
+  overflow-y: auto !important;
+}
+.vote_area {
+  display: block;
+}
