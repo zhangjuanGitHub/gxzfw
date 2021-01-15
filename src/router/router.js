@@ -7,6 +7,7 @@ import message from './message'
 import system from './system'
 import propagation from './propagation'
 import repository from './repository'
+import reviews from './reviews'
 import Home from '@/views/Home'
 import articlepublic from './articlepublic'
 import Login from '@/views/auth/Login'
@@ -65,6 +66,7 @@ routes = routes.concat(message) // 中央信息厨房
 routes = routes.concat(system) // 系统管理
 routes = routes.concat(articlepublic) // 稿件发布
 routes = routes.concat(repository) // 媒体资源库
+routes = routes.concat(reviews) // 网评管理
 routes = routes.concat(propagation) // 传播力监测
 const router = new Router({
   mode: 'history',

@@ -188,3 +188,6 @@ html::-webkit-scrollbar {
   display: flex !important;
   flex-wrap: wrap !important;
 }
+.online-reviews-search .el-form-item {
+  margin-bottom: 0px;
+}

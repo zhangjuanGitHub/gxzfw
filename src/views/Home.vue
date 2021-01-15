@@ -2,18 +2,15 @@
   <div class="home container">
     <div class="cont-left">
       <div class="cont-userinfo" :style="{backgroundImage: userBack}">
-        <!-- <div class="cont-img"><img :src="userBack" alt=""></div> -->
         <div class="cont-text">
           <div>{{this.roleName}} {{this.userName}} 您好！</div>
           <div>现在是 {{showNowTime}}</div>
         </div>
       </div>
-      <!-- 7/3 9:40东阳让去掉除审核数外所有权限 -->
       <div class="handle">
         <h2 class="list-head">待处理事项</h2>
         <div class="handle-list">
           <ul>
-            <!-- 9/29 9:21广西添加权限 -->
             <li v-permission="306"><span>需要审核数</span>
               <i v-text="leftValue.needCheckArticleNum" @click="AuditList"></i> 篇
             </li>
@@ -48,9 +45,6 @@
       </div>
     </div>
     <div class="cont-right">
-      <!-- <div class="clock-box">
-        <clock :time="realTime"></clock>
-      </div> -->
       <div class="ansy-list tittle-list">
         <ul>
           <li @click="toPush('HotRankingWx')">
@@ -108,7 +102,6 @@
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
 import 'swiper/swiper-bundle.css'
 import { mapState, mapGetters } from 'vuex'
-// import Clock from 'vue-clock2'
 // 引入基本模板
 let echarts = require('echarts/lib/echarts')
 // 引入折线图组件
@@ -175,7 +168,6 @@ export default {
     }
   },
   components: {
-    // Clock,
     swiper,
     swiperSlide
   },
@@ -193,19 +185,6 @@ export default {
     this.drawLine()
     this.honeTodo()
     this.getContibuteList()
-    // new Promise(this.drawLine).then(res => {
-    //   return new Promise(this.honeTodo)
-    // }).catch(() => { })
-    // 页面加载完后显示当前时间
-    // this.realTime = this.dealWithTime(new Date())
-    // this.realData = this.dealWith(new Date())
-    // 定时刷新时间
-    // let that = this
-    // 定时器
-    // this.timer = setInterval(function () {
-    //   that.realTime = that.dealWithTime(new Date())// 修改数据date
-    //   that.realDat = that.dealWith(new Date())
-    // }, 1000)
   },
   methods: {
     showMyArticle () {

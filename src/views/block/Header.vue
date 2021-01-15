@@ -50,8 +50,8 @@
                           v-permission="6">
               媒体联盟
             </el-menu-item>
-            <el-menu-item index="binding">
-              政法网军
+            <el-menu-item index="reviews">
+              网评管理
             </el-menu-item>
           </el-menu>
         </div>
@@ -225,8 +225,9 @@ export default {
         case 'contributions':
           this.$router.push({ name: 'Contributions' })
           break
-        case 'binding':
-          this.$router.push({ name: 'Binding1', query: { type: 1 } })
+        case 'reviews':
+          this.$router.push({ name: 'ReviewsAssess' })
+          break
       }
     }
   },

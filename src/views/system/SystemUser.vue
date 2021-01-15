@@ -102,10 +102,6 @@
                                      width="110"
                                      show-overflow-tooltip>
                     </el-table-column>
-                    <!-- <el-table-column label="创建时间"
-                                     width="130">
-                      <template slot-scope="scope">{{ scope.row.createTime }}</template>
-                    </el-table-column> -->
                     <el-table-column prop="name"
                                      label="状态"
                                      width="65">
