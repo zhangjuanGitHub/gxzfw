@@ -8,7 +8,7 @@
                     prop="function">
         <el-select v-model="ruleForm.function"
                    size="small"
-                   placeholder="请选择职能"
+                   placeholder="全部"
                    class="mode-wid">
           <el-option v-for="(item, index) of functionList"
                      :label="item"
@@ -74,7 +74,7 @@ export default {
       getMapVal: '',
       region: [], // 地区
       ruleForm: {
-        function: '全部',
+        function: '',
         region: '',
         time: '',
         pageNum: 1,

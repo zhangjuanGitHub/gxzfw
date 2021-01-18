@@ -5,7 +5,7 @@
                 :model="ruleForm"
                 inline="inline"
                 label-position="left">
-        <el-form-item label="选择时间"
+        <el-form-item label="时间"
                       prop="timeRange">
           <el-date-picker v-model="ruleForm.timeRange"
                           size="small"
@@ -15,13 +15,27 @@
                           range-separator="-"
                           start-placeholder="开始日期"
                           end-placeholder="结束日期"
-                          @change="dateChange">
+                          @change="dateChange"
+                          class="date-search">
           </el-date-picker>
+        </el-form-item>
+        <el-form-item label="职能"
+                      prop="function">
+          <el-select v-model="ruleForm.function"
+                    size="small"
+                    placeholder="全部"
+                    class="mode-wid">
+            <el-option v-for="(item, index) of functionList"
+                      :label="item"
+                      :value="item"
+                      :key="index"></el-option>
+          </el-select>
         </el-form-item>
         <el-form-item prop="keyword" label="关键字">
           <el-input v-model="ruleForm.keyword"
                     size="small"
-                    placeholder="请输入关键字"></el-input>
+                    placeholder="请输入关键字"
+                    class="keyword-search"></el-input>
         </el-form-item>
         <el-form-item>
           <el-button size="small"
@@ -31,7 +45,6 @@
                       @click="resetBtnForm('ruleForm')">重置</el-button>
         </el-form-item>
       </el-form>
-      <!--      <router-link :to="{name: 'Null'}">更多</router-link>-->
     </div>
     <div class='content-box'>
       <ul class='content-ul'>
@@ -92,6 +105,7 @@ export default {
   name: 'Inspect',
   data () {
     return {
+      functionList: [],
       inspectList: [],
       dataLess: false,
       dataNull: false,
@@ -122,6 +136,7 @@ export default {
       ruleForm: {
         cid: '', // 栏目id
         keyword: '', // 搜索关键字
+        function: '',
         region: '', // 地区
         startDate: '', // 开始时间
         endDate: '', // 结束时间
@@ -242,11 +257,20 @@ export default {
       start.setTime(start.getTime() - 3600 * 1000 * 24 * 7)
       this.ruleForm.timeRange[0] = moment(start).format('YYYY-MM-DD')
       this.ruleForm.timeRange[1] = moment(end).format('YYYY-MM-DD')
+    },
+    // 获取职能
+    getShowFunction () {
+      this.$http.get(this.$api.showFunction)
+        .then(res => {
+          this.functionList = res.data.data
+        })
+        .catch(() => { })
     }
   },
   created () {
     this.getWeek()
     this.getList()
+    this.getShowFunction()
   },
   components: {
     // eslint-disable-next-line vue/no-unused-components
@@ -262,7 +286,6 @@ export default {
   }
   .inspect-header .el-form {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 0 20px;
   }

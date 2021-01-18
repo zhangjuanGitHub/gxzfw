@@ -20,17 +20,29 @@
                             @change="dateChange">
             </el-date-picker>
           </el-form-item>
+          <el-form-item label="职能"
+                        prop="function">
+            <el-select v-model="ruleForm.function"
+                      size="small"
+                      placeholder="全部"
+                      class="mode-wid">
+              <el-option v-for="(item, index) of functionList"
+                        :label="item"
+                        :value="item"
+                        :key="index"></el-option>
+            </el-select>
+          </el-form-item>
           <el-form-item label="排序"
                         prop="optionSort">
             <el-cascader v-model="ruleForm.optionSort"
                          :options="wxOptions"
                          size="small"></el-cascader>
           </el-form-item>
-          <el-form-item class="keyword"
-                        label="搜索">
+          <el-form-item label="搜索">
             <el-select v-model="ruleForm.keywordType"
-                             size="small"
-                             placeholder="请选择">
+                       size="small"
+                       placeholder="请选择"
+                       class="mode-newmedia">
               <el-option label="全部"
                           value="0"></el-option>
               <el-option label="标题"
@@ -44,7 +56,8 @@
           <el-form-item prop="keyword">
             <el-input v-model="ruleForm.keyword"
                       size="small"
-                      placeholder="请输入关键字"></el-input>
+                      placeholder="请输入关键字"
+                      class="mode-wid"></el-input>
           </el-form-item>
           <el-form-item>
             <el-button size="small"
@@ -124,6 +137,7 @@ export default {
   name: 'Wx',
   data () {
     return {
+      functionList: [],
       wxOptions: [
         {
           value: 'pubtime',
@@ -181,6 +195,7 @@ export default {
       ruleForm: {
         cid: '', // 栏目id
         region: '', // 地区
+        function: '',
         startDate: '', // 开始时间
         endDate: '', // 结束时间
         organization: '', // 职能
@@ -293,27 +308,19 @@ export default {
       this.ruleForm.timeRange[0] = moment(start).format('YYYY-MM-DD')
       this.ruleForm.timeRange[1] = moment(end).format('YYYY-MM-DD')
     },
-    getBeforeWeek (index) {
-      let date = new Date()
-      let nowdate = new Date(date - index * 24 * 3600 * 1000)
-      let year = nowdate.getFullYear()
-      let month = nowdate.getMonth() + 1
-      let day = nowdate.getDate()
-      if (month >= 1 && month <= 9) {
-        month = '0' + month
-      }
-      if (day >= 0 && day <= 9) {
-        day = '0' + day
-      }
-      let formatwdate = year + '-' + month + '-' + day
-      return formatwdate
+    // 获取职能
+    getShowFunction () {
+      this.$http.get(this.$api.showFunction)
+        .then(res => {
+          this.functionList = res.data.data
+        })
+        .catch(() => { })
     }
   },
   created () {
-    // this.ruleForm.timeRange[0] = this.getBeforeWeek(7)
-    // this.ruleForm.timeRange[1] = this.getBeforeWeek(0)
     this.getWxList()
     this.getWeek()
+    this.getShowFunction()
   },
   components: {
     tagDialog

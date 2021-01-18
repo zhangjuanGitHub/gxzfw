@@ -8,7 +8,7 @@
                  :model="form"
                  inline="inline"
                  label-position="left">
-          <!-- <el-form-item label="时间"
+          <el-form-item label="时间"
                         prop="publishTime">
             <el-date-picker v-model="form.publishTime"
                             size="small"
@@ -19,12 +19,12 @@
                             start-placeholder="开始日期"
                             end-placeholder="结束日期">
             </el-date-picker>
-          </el-form-item> -->
+          </el-form-item>
           <el-form-item label="职能"
                         prop="function">
             <el-select v-model="form.function"
                       size="small"
-                      placeholder="请选择职能"
+                      placeholder="全部"
                       class="mode-wid">
               <el-option v-for="(item, index) of functionList"
                         :label="item"
@@ -32,20 +32,22 @@
                         :key="index"></el-option>
             </el-select>
           </el-form-item>
-          <el-form-item  label="地区" prop="districts">
+          <!-- <el-form-item  label="地区" prop="districts">
             <el-cascader :options="screenData"
                         size="small"
+                        class="mode-wid"
                         v-model="form.districts"
                         placeholder="全部"
                         :show-all-levels="false"
                         :props="{ checkStrictly: true }"
                         clearable></el-cascader>
-          </el-form-item>
+          </el-form-item> -->
           <el-form-item label="排序"
                         prop="optionSort">
             <el-cascader v-model="form.optionSort"
                          :options="wxOptions"
-                         size="small"></el-cascader>
+                         size="small"
+                         class="mode-wid"></el-cascader>
           </el-form-item>
           <el-form-item class="keyword" prop="keyword"
                         label="关键字">
@@ -197,7 +199,7 @@ export default {
       ismodal: false, // 遮罩
       centerList: [],
       form: {
-        function: '全部',
+        function: '',
         districts: [],
         keyword: '',
         cid: 1,

@@ -69,6 +69,18 @@
                    ref="ruleForm">
             <div class="search-box">
               <div class="dis-flex">
+                <el-form-item label="职能:"
+                              prop="function"
+                              v-if="changeSide">
+                  <el-select v-model="ruleForm.function"
+                            size="small"
+                            placeholder="全部">
+                    <el-option v-for="(item, index) of functionList"
+                              :label="item"
+                              :value="item"
+                              :key="index"></el-option>
+                  </el-select>
+                </el-form-item>
                 <el-form-item class="label-box text-center"
                               prop="publishChannel"
                               v-if="!changeSide">
@@ -93,8 +105,7 @@
                               v-if="!changeSide"
                               class="label-box text-center">
                   <span class="public-span-style">流程状态:</span>
-                  <el-select class="region"
-                             v-model="ruleForm.checkStatus"
+                  <el-select v-model="ruleForm.checkStatus"
                              placeholder="全部">
                     <el-option label="已撤回"
                                :value="-1"></el-option>
@@ -130,13 +141,12 @@
                   <el-date-picker v-model="ruleForm.date"
                                   type="daterange"
                                   value-format="yyyy-MM-dd"
-                                  range-separator="至"
+                                  range-separator="-"
                                   start-placeholder="开始日期"
                                   end-placeholder="结束日期">
                   </el-date-picker>
                 </el-form-item>
-                <el-form-item class="margin-none"
-                              prop="keyword">
+                <el-form-item prop="keyword">
                   <span class="public-span-style">关键字:</span>
                   <el-input class="keyword-input"
                             v-model="ruleForm.keyword"
@@ -146,8 +156,6 @@
                   <el-button type="primary"
                              size="small"
                              @click="screen">筛选</el-button>
-                </el-form-item>
-                <el-form-item class="burron-box">
                   <el-button size="small"
                              @click="resetForm('ruleForm')">重置</el-button>
                 </el-form-item>
@@ -201,11 +209,13 @@ export default {
   name: 'MessageList',
   data () {
     return {
+      functionList: [],
       total: 0,
       changeSide: false,
       ismodal: false, // 遮罩
       tableData: [],
       ruleForm: {
+        function: '',
         publishChannel: '', // 渠道
         date: [], // 日期数组
         departmentId: [], // 单位名称
@@ -252,6 +262,7 @@ export default {
       this.ruleForm.departmentId = []
       this.ruleForm.checkStatus = '' // 审核状态
       this.ruleForm.keyword = '' // 关键字
+      this.ruleForm.function = ''
       this.ruleForm.pageNum = 1
       this.ruleForm.pageSize = 20
       this.$refs.child.handleCurrentChange(this.ruleForm.pageNum)
@@ -300,6 +311,14 @@ export default {
         })
         .catch(() => {
         })
+    },
+    // 获取职能
+    getShowFunction () {
+      this.$http.get(this.$api.showFunction)
+        .then(res => {
+          this.functionList = res.data.data
+        })
+        .catch(() => { })
     }
   },
   mounted () {
@@ -314,6 +333,7 @@ export default {
   created () {
     // this.getList()
     this.getDepartment()
+    this.getShowFunction()
   },
   components: {
     pagination,
@@ -343,9 +363,11 @@ export default {
     margin-right: 10px;
   }
 }
-.el-select,
+.el-select {
+  width: 115px;
+}
 .el-cascader {
-  width: 150px;
+  width: 160px;
 }
 
 .el-form-item {

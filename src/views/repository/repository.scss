@@ -6,13 +6,7 @@
   margin-bottom: 20px;
   background-color: #eff1f4;
   border-radius: 10px;
-  padding: 0 8px;
-}
-.data-search .el-input {
-  width: 205px;
-}
-.data-search .el-date-editor {
-  width: 315px;
+  padding: 0 15px;
 }
 .department-detail .el-image img {
   width: 30px;
@@ -66,14 +60,14 @@
   width: 250px;
 }
 .media-data-search .el-date-editor {
-  width: 220px;
+  width: 215px;
 }
 .media-data-search .el-cascader .el-input .el-input__inner {
-  width: 200px;
+  width: 140px;
 }
-.media-data-search .el-select .el-input__inner {
-  width: 105px;
-}
+// .media-data-search .el-select .el-input__inner {
+//   width: 105px;
+// }
 .department-name span {
   color: #ff0000;
 }

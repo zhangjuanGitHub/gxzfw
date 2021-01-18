@@ -191,12 +191,19 @@ html::-webkit-scrollbar {
 .online-reviews-search .el-form-item {
   margin-bottom: 0px;
 }
+/* 职能 */
 .mode-wid {
-  width: 130px;
+  width: 120px;
 }
-/* .el-range-editor.el-input__inner {
-  padding: 3px 3px;
+/* 热点新闻 */
+.el-date-editor--daterange.el-input__inner {
+  width: 215px;
 }
-.el-input__inner {
-  padding: 0 5px;
-} */
+.mode-newmedia {
+  width: 85px;
+}
+.mode-cas {
+  width: 140px;
+}
+/* 中央信息厨房 */
+

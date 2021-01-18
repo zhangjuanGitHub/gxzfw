@@ -6,13 +6,26 @@
         <el-form ref="accountfrom"
                  :model="accountfrom"
                  label-width="60px">
+          <el-form-item label="职能"
+                        prop="function">
+            <el-select v-model="accountfrom.function"
+                      size="small"
+                      placeholder="全部"
+                      class="mode-wid">
+              <el-option v-for="(item, index) of functionList"
+                        :label="item"
+                        :value="item"
+                        :key="index"></el-option>
+            </el-select>
+          </el-form-item>
           <el-form-item label="关键字"
                         prop="keyword">
             <el-input v-model="accountfrom.keyword"
                       size="small"
+                      class="mode-cas"
                       placeholder="请输入内容"></el-input>
           </el-form-item>
-          <el-form-item label="地区"
+          <!-- <el-form-item label="地区"
                         prop="districts">
             <el-cascader :options="screenData"
                          size="small"
@@ -21,7 +34,7 @@
                          :show-all-levels="false"
                          :props="{ checkStrictly: true }"
                          clearable></el-cascader>
-          </el-form-item>
+          </el-form-item> -->
           <div class="reroder">
             <el-button type="primary"
                        size="small"
@@ -253,6 +266,7 @@ export default {
       accountfrom: {
         districts: [],
         keyword: '',
+        function: '',
         cid: 1,
         publishTime: [],
         sortDirection: '',
@@ -260,6 +274,7 @@ export default {
         pageNum: 1,
         pageSize: 20
       },
+      functionList: [],
       UserList: true,
       openName: '',
       type: '',
@@ -275,12 +290,21 @@ export default {
     this.accountfrom.cid = this.dis
     this.tabs = this.$route.query.tabs
     this.getRouterData()
-    this.getScreenlist()
+    this.getShowFunction()
+    // this.getScreenlist() // 获取地区列表
   },
   components: {
     pagination
   },
   methods: {
+    // 获取职能
+    getShowFunction () {
+      this.$http.get(this.$api.showFunction)
+        .then(res => {
+          this.functionList = res.data.data
+        })
+        .catch(() => { })
+    },
     // 分页
     getPagingChange (change) {
       this.accountfrom.pageNum = change.page
@@ -577,9 +601,6 @@ export default {
 }
 .data-center-header .el-form-item .el-checkbox:last-child {
   margin-left: -70px;
-}
-.data-search .el-input {
-  width: 240px;
 }
 .reroder {
   width: 170px;

@@ -19,6 +19,18 @@
                             end-placeholder="结束日期">
             </el-date-picker>
           </el-form-item>
+          <el-form-item label="职能"
+                        prop="function">
+            <el-select v-model="ruleForm.function"
+                      size="small"
+                      placeholder="全部"
+                      class="mode-wid">
+              <el-option v-for="(item, index) of functionList"
+                        :label="item"
+                        :value="item"
+                        :key="index"></el-option>
+            </el-select>
+          </el-form-item>
           <el-form-item label="排序"
                         prop="optionSort">
             <el-cascader v-model="ruleForm.optionSort"
@@ -29,7 +41,8 @@
                         label="关键字">
             <el-input v-model="ruleForm.keyword"
                       size="small"
-                      placeholder="请输入关键字"></el-input>
+                      placeholder="请输入关键字"
+                      class="mode-wid"></el-input>
           </el-form-item>
           <el-form-item>
             <el-button size="small"
@@ -104,6 +117,7 @@ export default {
   name: 'Wx',
   data () {
     return {
+      functionList: [],
       dyOptions: [
         {
           value: 'publish_time',
@@ -160,6 +174,7 @@ export default {
         pageNum: 1, // 页码
         pageSize: 20,
         keyword: '',
+        function: '',
         sortDirection: 'desc', // 排序顺序 desc
         sortField: 'digg_count', // 0时间，1阅读，2转发
         optionSort: ['digg_count', 'dianzanDo']
@@ -233,11 +248,20 @@ export default {
       start.setTime(start.getTime() - 3600 * 1000 * 24 * 7)
       this.ruleForm.publishTime[0] = moment(start).format('YYYY-MM-DD')
       this.ruleForm.publishTime[1] = moment(end).format('YYYY-MM-DD')
+    },
+    // 获取职能
+    getShowFunction () {
+      this.$http.get(this.$api.showFunction)
+        .then(res => {
+          this.functionList = res.data.data
+        })
+        .catch(() => { })
     }
   },
   created () {
     this.getDyList()
     this.getWeek()
+    this.getShowFunction()
   },
   components: {}
 }

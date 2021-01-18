@@ -9,7 +9,7 @@
                       prop="function">
           <el-select v-model="ruleForm.function"
                      size="small"
-                     placeholder="请选择职能"
+                     placeholder="全部"
                      class="mode-wid">
             <el-option v-for="(item, index) of functionList"
                        :label="item"
@@ -214,7 +214,7 @@ export default {
       functionList: [], // 职能
       region: [], // 地区
       ruleForm: {
-        function: '全部',
+        function: '',
         region: '',
         keyword: '', // 关键字
         pageNum: 1,

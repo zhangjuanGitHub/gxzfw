@@ -19,6 +19,18 @@
                             :picker-options="pickerOptions">
             </el-date-picker>
           </el-form-item>
+          <el-form-item label="职能"
+                        prop="function">
+            <el-select v-model="ruleForm.function"
+                      size="small"
+                      placeholder="全部"
+                      class="mode-wid">
+              <el-option v-for="(item, index) of functionList"
+                        :label="item"
+                        :value="item"
+                        :key="index"></el-option>
+            </el-select>
+          </el-form-item>
           <el-form-item prop="keyword"
                         label="内容关键字">
             <el-input v-model="ruleForm.keyword"
@@ -28,6 +40,7 @@
           <el-form-item prop="ncKeyword" label="标签类型">
             <el-select v-model="ruleForm.ncKeyword"
                       size="small"
+                      class="mode-cas"
                       placeholder="请选择标签类型">
               <el-option v-for="(item, index) of tagList"
                         :label="item.labelName"
@@ -139,6 +152,7 @@ export default {
   name: 'Wb',
   data () {
     return {
+      functionList: [],
       deleteVisible: false,
       deleteItem: {}, // 删除数据
       getAddInput: '', // 标签
@@ -181,6 +195,7 @@ export default {
       ruleForm: {
         date: [], // 时间
         keyword: '', // 搜索关键字
+        function: '',
         level: '3', // 网站
         pageNum: 1, // 分页
         pageSize: 20,
@@ -329,11 +344,20 @@ export default {
           }
         })
         .catch(() => { })
+    },
+    // 获取职能
+    getShowFunction () {
+      this.$http.get(this.$api.showFunction)
+        .then(res => {
+          this.functionList = res.data.data
+        })
+        .catch(() => { })
     }
   },
   created () {
     this.getWebsiteList()
     this.getTagList()
+    this.getShowFunction()
   }
 }
 </script>
@@ -345,13 +369,7 @@ export default {
     background: #ffffff;
   }
   .new-media .data-search .el-input {
-  width: 150px;
-}
-.new-media .data-search .el-select .el-input {
-  width: 150px;
-}
-.new-media .data-search .el-date-editor {
-  width: 215px;
+  width: 135px;
 }
 .data-center-header {
   height: 40px;
@@ -373,7 +391,7 @@ export default {
   justify-content: space-around; */
 }
 .new-media .el-form .el-form-item {
-  margin-right: 20px;
+  margin-right: 15px;
   margin-bottom: 0;
   float: left;
 }

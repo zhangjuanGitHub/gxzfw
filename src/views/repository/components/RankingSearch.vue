@@ -4,7 +4,7 @@
       <el-form :inline="true"
                 ref="ruleForm"
                 :model="ruleForm">
-        <el-form-item label="日期"
+        <el-form-item label="时间"
                       class="form-time"
                       prop="time">
           <el-date-picker v-model="ruleForm.time"
@@ -16,18 +16,31 @@
                           end-placeholder="结束日期">
           </el-date-picker>
         </el-form-item>
-        <el-form-item label="排序" class="form-sort" prop="optionSort">
+        <el-form-item label="职能"
+                      prop="function">
+          <el-select v-model="ruleForm.function"
+                    size="small"
+                    placeholder="全部"
+                    class="mode-wid">
+            <el-option v-for="(item, index) of functionList"
+                      :label="item"
+                      :value="item"
+                      :key="index"></el-option>
+          </el-select>
+        </el-form-item>
+        <el-form-item label="排序" prop="optionSort">
             <el-cascader v-model="ruleForm.optionSort"
-                    :options="options"
-                    size="small">
+                        :options="options"
+                        size="small"
+                        class="mode-cas">
             </el-cascader>
         </el-form-item>
         <el-form-item label="关键字"
-                      class="keyword"
                       prop="keyword">
           <el-input size="small"
                     v-model="ruleForm.keyword"
-                    placeholder="请输入关键字"></el-input>
+                    placeholder="请输入关键字"
+                    class="mode-wid"></el-input>
         </el-form-item>
         <el-form-item>
           <el-button size="small"
@@ -214,9 +227,11 @@ export default {
           label: '今日头条'
         }
       ],
+      functionList: [],
       ruleForm: {
         source: '',
         keyword: '',
+        function: '',
         time: [],
         pageNum: 1,
         pageSize: 20,
@@ -243,7 +258,18 @@ export default {
     },
     exportExcel () {
       this.$emit('exportExcel')
+    },
+    // 获取职能
+    getShowFunction () {
+      this.$http.get(this.$api.showFunction)
+        .then(res => {
+          this.functionList = res.data.data
+        })
+        .catch(() => { })
     }
+  },
+  created () {
+    this.getShowFunction()
   },
   mounted () {
     this.routeName = this.$route.path.split('/')[3]

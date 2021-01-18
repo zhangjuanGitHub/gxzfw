@@ -1,5 +1,8 @@
 .message-list-box .el-date-editor .el-input__inner {
-  padding: 0 13px;
+  padding: 0 10px;
+}
+.message-list-box .el-date-editor {
+  width: 215px;
 }
 
 .contribute-detail .el-input .el-input__inner {
@@ -212,9 +215,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
   margin-right: 0;
-}
-.message-list-box .el-date-editor {
-  width: 250px;
 }
 .hide .el-upload--picture-card {
   display: none;
