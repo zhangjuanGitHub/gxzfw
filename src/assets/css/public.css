@@ -191,3 +191,12 @@ html::-webkit-scrollbar {
 .online-reviews-search .el-form-item {
   margin-bottom: 0px;
 }
+.mode-wid {
+  width: 130px;
+}
+/* .el-range-editor.el-input__inner {
+  padding: 3px 3px;
+}
+.el-input__inner {
+  padding: 0 5px;
+} */

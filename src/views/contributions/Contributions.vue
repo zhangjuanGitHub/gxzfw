@@ -90,7 +90,7 @@
         </el-table-column>
       </el-table>
     </div>
-    <div class="inter">
+    <!-- <div class="inter">
       <h2>
         <span>在线征稿</span>
         <span class="roter"
@@ -110,10 +110,6 @@
                          width="280"
                          label="征稿单位">
         </el-table-column>
-        <!-- <el-table-column prop="userEmail"
-                         width="200"
-                         label="联系方式">
-        </el-table-column> -->
         <el-table-column width="250"
                          label="起止日期">
           <template slot-scope="scope">{{scope.row.solicitStart}}-{{scope.row.solicitEnd}}</template>
@@ -131,7 +127,7 @@
           </template>
         </el-table-column>
       </el-table>
-    </div>
+    </div> -->
   </div>
 </template>
 <script>

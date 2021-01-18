@@ -8,7 +8,7 @@
                  :model="form"
                  inline="inline"
                  label-position="left">
-          <el-form-item label="时间"
+          <!-- <el-form-item label="时间"
                         prop="publishTime">
             <el-date-picker v-model="form.publishTime"
                             size="small"
@@ -19,6 +19,18 @@
                             start-placeholder="开始日期"
                             end-placeholder="结束日期">
             </el-date-picker>
+          </el-form-item> -->
+          <el-form-item label="职能"
+                        prop="function">
+            <el-select v-model="form.function"
+                      size="small"
+                      placeholder="请选择职能"
+                      class="mode-wid">
+              <el-option v-for="(item, index) of functionList"
+                        :label="item"
+                        :value="item"
+                        :key="index"></el-option>
+            </el-select>
           </el-form-item>
           <el-form-item label="地区"
                         prop="districts">
@@ -145,7 +157,9 @@ export default {
       dialogVisible: false, // 回复弹框
       ismodal: false, // 遮罩
       centerdouyin: [],
+      functionList: [],
       form: {
+        function: '全部',
         districts: [],
         keyword: '',
         cid: 1,
@@ -294,6 +308,14 @@ export default {
     getData () {
       this.form.pageNum++
       this.getRouterData()
+    },
+    // 获取职能
+    getShowFunction () {
+      this.$http.get(this.$api.showFunction)
+        .then(res => {
+          this.functionList = res.data.data
+        })
+        .catch(() => { })
     }
   },
   computed: {
@@ -303,6 +325,7 @@ export default {
     this.form.cid = this.$route.query.dis
     this.getRouterData()
     this.getScreenlist()
+    this.getShowFunction()
   },
   watch: {
     $route () {

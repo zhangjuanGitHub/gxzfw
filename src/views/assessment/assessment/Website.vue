@@ -5,28 +5,30 @@
                ref="ruleForm"
                :model="ruleForm"
                class="demo-form-inline">
-        <!-- <el-form-item label="职能:"
+        <el-form-item label="职能:"
                       prop="function">
           <el-select v-model="ruleForm.function"
                      size="small"
-                     placeholder="请选择职能">
+                     placeholder="请选择职能"
+                     class="mode-wid">
             <el-option v-for="(item, index) of functionList"
                        :label="item"
                        :value="item"
                        :key="index"></el-option>
           </el-select>
-        </el-form-item> -->
-       <!-- <el-form-item label="地区:"
-                     prop="region">
-         <el-select v-model="ruleForm.region"
-                    placeholder="请选择地区"
-                    size="small">
-           <el-option :value="item"
-                      :label="item"
-                      v-for="(item, index) of region"
-                      :key="index"></el-option>
-         </el-select>
-       </el-form-item> -->
+        </el-form-item>
+        <el-form-item label="地区:"
+                      prop="region">
+          <el-select v-model="ruleForm.region"
+                      placeholder="请选择地区"
+                      size="small"
+                      class="mode-wid">
+            <el-option :value="item"
+                        :label="item"
+                        v-for="(item, index) of region"
+                        :key="index"></el-option>
+          </el-select>
+        </el-form-item>
         <el-form-item label="关键字"
                       prop="keyword">
           <el-input size="small"
@@ -212,6 +214,8 @@ export default {
       functionList: [], // 职能
       region: [], // 地区
       ruleForm: {
+        function: '全部',
+        region: '',
         keyword: '', // 关键字
         pageNum: 1,
         pageSize: 20
@@ -249,7 +253,6 @@ export default {
     },
     // 点击月份查看
     showTeamDialog (row, month) {
-      console.log(row)
       let rows = {
         eid: row.eid,
         year: new Date().getFullYear(),
@@ -258,7 +261,6 @@ export default {
       if (new Date().getMonth() + 1 === 1) {
         rows.year = new Date().getFullYear() - 1
       }
-      console.log(new Date().getMonth())
       this.echartsData = rows
       this.dialogVisible = !this.dialogVisible
     },
@@ -298,7 +300,7 @@ export default {
   created () {
     this.ruleForm.pageNum = this.$route.query.page || 1
     this.getWzList()
-    // this.getShowFunction()
+    this.getShowFunction()
     // this.getQueryArea() // 获取地区
   },
   components: {

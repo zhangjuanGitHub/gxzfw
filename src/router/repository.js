@@ -8,7 +8,7 @@ module.exports = [
         path: 'inspect',
         name: 'Inspect',
         meta: {
-          title: '检察要闻'
+          title: '政法要闻'
         },
         component: () => import('@/views/repository/Inspect')
       }

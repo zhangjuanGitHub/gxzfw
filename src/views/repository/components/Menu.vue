@@ -9,10 +9,10 @@
         <span>热点新闻</span>
       </template>
       <el-menu-item-group>
-        <el-menu-item index="jc">检察要闻</el-menu-item>
+        <el-menu-item index="jc">政法要闻</el-menu-item>
       </el-menu-item-group>
       <el-menu-item-group>
-        <el-menu-item index="media">检察新媒体</el-menu-item>
+        <el-menu-item index="media">政法新媒体</el-menu-item>
       </el-menu-item-group>
       <el-menu-item-group>
         <el-menu-item index="ranking">热点排行</el-menu-item>

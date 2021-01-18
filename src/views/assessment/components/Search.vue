@@ -4,6 +4,30 @@
              ref="ruleForm"
              :model="ruleForm"
              class="demo-form-inline">
+      <el-form-item label="职能:"
+                    prop="function">
+        <el-select v-model="ruleForm.function"
+                   size="small"
+                   placeholder="请选择职能"
+                   class="mode-wid">
+          <el-option v-for="(item, index) of functionList"
+                     :label="item"
+                     :value="item"
+                     :key="index"></el-option>
+        </el-select>
+      </el-form-item>
+      <el-form-item label="地区:"
+                    prop="region">
+        <el-select v-model="ruleForm.region"
+                   size="small"
+                   placeholder="请选择地区"
+                   class="mode-wid">
+          <el-option v-for="(item, index) of region"
+                     :value="item"
+                     :label="item"
+                     :key="index"></el-option>
+        </el-select>
+      </el-form-item>
       <el-form-item label="选择日期:"
                     prop="time">
         <el-date-picker v-model="ruleForm.time"
@@ -132,8 +156,8 @@ export default {
   },
   created () {
     this.getCurrent()
-    this.getQueryWxArea() // 获取地区
     this.searchList()
+    this.getShowFunction()
   },
   components: {}
 }

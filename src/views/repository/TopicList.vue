@@ -22,7 +22,6 @@
                 :lg="20"
                 :xl="20">
           <div class="topic-detail-box">
-<!--            <p class="topic-title"><span>专题列表</span></p>-->
             <el-row :gutter="15">
               <el-col :span="8"
                       v-for="(item, index) in topicList"
@@ -31,16 +30,8 @@
                 <el-card :body-style="{ padding: '0px' }"
                          shadow="hover">
                   <div class="topic-img">
-                    <!--                    <router-link :to="{ name: 'TopicDetail' }">-->
-                    <!--                      <img class="cursor"-->
-                    <!--                           src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">-->
-                    <!--                    </router-link>-->
                     <p class="topic-detail-title lin-clamp-1" v-text="item.specialName"></p>
                     <p class="createdTime">创建时间: <span v-text="item.createTime"></span></p>
-<!--                    <div class="oper-icon"-->
-<!--                         @click.stop="testAlert">-->
-<!--                      123-->
-<!--                    </div>-->
                   </div>
                   <div class="topic-detail">
                     <div class="topic-detail-body cursor">
@@ -51,7 +42,6 @@
                         <p v-if="item.status === 1">状态：<span class="danger">未分析</span></p>
                         <p v-else-if="item.status === 2">状态：<span class="primary">分析中</span></p>
                         <p v-else-if="item.status === 3">状态：<span class="success">已完成</span></p>
-<!--                        <p class="topic-source">来源：<span>检察要闻</span></p>-->
                         <p>相关报道：<span class="primary" v-text="item.relatedReportNum"></span></p>
                       </div>
                       <div class="display-div just-bet">

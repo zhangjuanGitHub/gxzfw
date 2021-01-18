@@ -4,7 +4,7 @@
       <el-breadcrumb separator-class="el-icon-arrow-right">
         <el-breadcrumb-item :to="{ name: 'Inspect' }">媒体资源库</el-breadcrumb-item>
         <el-breadcrumb-item :to="{ name: 'Inspect' }">热点新闻</el-breadcrumb-item>
-        <el-breadcrumb-item>检察新媒体</el-breadcrumb-item>
+        <el-breadcrumb-item>政法新媒体</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
     <div class="hotnews-box">

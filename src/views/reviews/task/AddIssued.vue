@@ -245,10 +245,6 @@ export default {
       this.isIndeterminate = checkedCount > 0 && checkedCount < this.organizerList.length
     },
     submit (ruleForm) {
-      // if (this.ruleForm.undertaker.length <= 0) {
-      //   this.$message.warning('请选择承办人！')
-      //   return false
-      // }
       if (this.checkList.length <= 0) {
         this.$message.warning('请选择承办人！')
         return false
@@ -269,11 +265,6 @@ export default {
         }
       })
     },
-    // 选中承办人时
-    // handleChange (value, direction, movedKeys) {
-    //   console.log(value)
-    //   this.ruleForm.undertaker = value
-    // },
     filterMethod (query, item) {
       return item.userName.indexOf(query) > -1
     },
@@ -298,14 +289,7 @@ export default {
         if (value.id === this.checkList[index]) {
           this.checkList.splice(index, 1)
         }
-        // if (item === value) {
-        //   this.labelOrganizerList.splice(index, 1)
-        // }
-        // if (value === this.ruleForm.undertaker[index]) {
-        //   this.ruleForm.undertaker.splice(index, 1)
-        // }
       })
-      console.log(this.checkList)
     },
     // 取消弹框
     closeDialog () {
@@ -313,36 +297,16 @@ export default {
       this.organizerList = []
     },
     getFindUserName () {
-      console.log(this.checkList)
       this.$http.post(this.$api.findUserName, this.checkList)
         .then(res => {
-          // let getUserNamList = []
-          // getUserNamList.push(res.data.data)
-          // let concatUserNameList = [...this.labelOrganizerList, ...getUserNamList]
-          // console.log(concatUserNameList)
           this.labelOrganizerList = res.data.data
-          console.log(res.data.data)
           this.labelOrganizerList = Array.from(new Set(this.labelOrganizerList))
-          console.log(this.labelOrganizerList)
         })
         .catch(() => {})
     },
     // 确定弹框
     confirmDialog () {
-      // this.ruleForm.undertaker = Array.from(new Set(this.ruleForm.undertaker))
       this.getFindUserName()
-      // this.ruleForm.undertaker.forEach((value) => {
-      //   this.organizerList.forEach((item) => {
-      //     if (value === item.id) {
-      //       let getUserNamList = []
-      //       getUserNamList.push({ undertaker: item.userName, id: item.id })
-      //       // let concatUserNameList = [...this.labelOrganizerList, ...getUserNamList]
-      //       // console.log(concatUserNameList)
-      //       this.labelOrganizerList = Array.from(new Set(getUserNamList))
-      //       console.log(this.labelOrganizerList)
-      //     }
-      //   })
-      // })
       this.dialogFormVisible = false
     },
     // 点击选择承办人
@@ -354,7 +318,6 @@ export default {
     // 点击单位
     handleNodeClick (data) {
       this.params.departmentId = data.value
-      // this.ruleForm.undertaker = this.ruleForm.undertaker
       this.organizerList = []
       this.getOrganizerList()
     },
@@ -367,9 +330,6 @@ export default {
             let datas = res.data.data.content
             this.organizerList.push(...datas)
             this.constTreeData = datas
-            // if (this.constTreeData.length <= 0) {
-            //   this.constTreeData = datas
-            // }
             if (datas.length < 31) {
               this.dataLess = true // 小于32
             }

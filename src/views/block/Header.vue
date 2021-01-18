@@ -30,12 +30,12 @@
             <el-menu-item index="propagation"
                           v-permission="4"
                           v-if="this.userInfo.cid">
-              新媒体传播力
+              大数据中心
             </el-menu-item>
             <el-menu-item index="setup"
                           v-permission="4"
                           v-else>
-              新媒体传播力
+              大数据中心
             </el-menu-item>
             <el-menu-item index="opinion"
                           @click="blankUrl"

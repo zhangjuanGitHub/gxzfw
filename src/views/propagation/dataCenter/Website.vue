@@ -8,7 +8,7 @@
                  :model="form"
                  inline="inline"
                  label-position="left">
-          <el-form-item label="时间"
+          <!-- <el-form-item label="时间"
                         prop="publishTime">
             <el-date-picker v-model="form.publishTime"
                             size="small"
@@ -19,6 +19,18 @@
                             start-placeholder="开始日期"
                             end-placeholder="结束日期">
             </el-date-picker>
+          </el-form-item> -->
+          <el-form-item label="职能"
+                        prop="function">
+            <el-select v-model="form.function"
+                      size="small"
+                      placeholder="请选择职能"
+                      class="mode-wid">
+              <el-option v-for="(item, index) of functionList"
+                        :label="item"
+                        :value="item"
+                        :key="index"></el-option>
+            </el-select>
           </el-form-item>
           <el-form-item label="地区"
                         prop="districts">
@@ -146,6 +158,7 @@ export default {
   props: ['tabs', 'routerId'],
   data () {
     return {
+      functionList: [],
       type: '',
       dataLess: false,
       dataNull: false,
@@ -163,6 +176,7 @@ export default {
       ismodal: false, // 遮罩
       centerList: [],
       form: {
+        function: '全部',
         districts: [],
         keyword: '',
         cid: 1,
@@ -304,6 +318,14 @@ export default {
     getData () {
       this.form.pageNum++
       this.getRouterData()
+    },
+    // 获取职能
+    getShowFunction () {
+      this.$http.get(this.$api.showFunction)
+        .then(res => {
+          this.functionList = res.data.data
+        })
+        .catch(() => { })
     }
   },
   computed: {
@@ -315,6 +337,7 @@ export default {
     this.getWeek()
     this.getRouterData()
     this.getScreenlist()
+    this.getShowFunction()
   },
   components: {
     scrollData
@@ -532,7 +555,7 @@ color: #333;
   font-size: 14px;
   font-weight: bold;
   color: rgba(51, 51, 51, 1);
-  line-height: 16px;
+  line-height: 25px;
   margin: 0 7px;
 }
 /* .list-see img {

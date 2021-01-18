@@ -1,7 +1,6 @@
 <template>
   <div class='inspect'>
     <div class='inspect-header'>
-      <!-- <p class='inspect-title'><span>检察要闻</span></p> -->
       <el-form ref="ruleForm"
                 :model="ruleForm"
                 inline="inline"

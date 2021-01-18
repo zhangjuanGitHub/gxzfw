@@ -25,21 +25,6 @@
                          :options="dyOptions"
                          size="small"></el-cascader>
           </el-form-item>
-          <!-- <el-form-item class="keyword"
-                        label="搜索">
-            <el-select v-model="ruleForm.keywordType"
-                             size="small"
-                             placeholder="请选择">
-              <el-option label="全部"
-                          value="0"></el-option>
-              <el-option label="标题"
-                          value="1"></el-option>
-              <el-option label="内容"
-                          value="2"></el-option>
-              <el-option label="账号"
-                          value="3"></el-option>
-            </el-select>
-          </el-form-item> -->
           <el-form-item prop="keyword"
                         label="关键字">
             <el-input v-model="ruleForm.keyword"
@@ -56,7 +41,10 @@
         </el-form>
       </div>
     </div>
-    <div class="content-douyin">
+    <div class="text-center" v-if="dataNull">
+      <img :src="require('@/assets/images/empty-data.png')" alt="" />
+    </div>
+    <div class="content-douyin" v-else>
       <div class="douyin-page" v-for="(item,index) in dyList" :key="index">
         <div class="cursor">
           <div v-if="item.video.cover_url">
@@ -95,9 +83,6 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="text-center" v-if="dataNull">
-      <img :src="require('@/assets/images/empty-data.png')" alt="" />
     </div>
     <scroll-data @getData="getData"
                  :dataLess="dataLess"></scroll-data>
