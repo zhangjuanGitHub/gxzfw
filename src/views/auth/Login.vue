@@ -3,7 +3,7 @@
     <!--    <svg-icon icon-class="account"></svg-icon>-->
     <div class="form-wrap login">
       <div class="logo-title">
-        <img :src="require('@/assets/images/guijian.png')">
+        <img :src="require('@/assets/images/zfw.png')">
         <p class="system-name">
           {{getCaptchaInfo.websiteName}}
         </p>
@@ -216,15 +216,9 @@ export default {
   top: 0;
   right: 0;
   bottom: 0;
-  background: url("../../assets/images/login.jpg") no-repeat fixed 50% 50% /
+  background: url("../../assets/images/true.jpg") no-repeat fixed 100% 100% /
     cover;
 }
-// .captch-input::after {
-//   content: "看不清？点我换一张";
-//   color: #aaaaaa;
-//   text-decoration: underline;
-//   cursor: pointer;
-// }
 .form-wrap .el-form {
   width: 320px;
   margin: 0 auto;

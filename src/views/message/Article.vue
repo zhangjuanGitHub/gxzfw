@@ -215,7 +215,7 @@ export default {
       ismodal: false, // 遮罩
       tableData: [],
       ruleForm: {
-        function: '',
+        function: '全部',
         publishChannel: '', // 渠道
         date: [], // 日期数组
         departmentId: [], // 单位名称

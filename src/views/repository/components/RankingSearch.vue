@@ -231,7 +231,7 @@ export default {
       ruleForm: {
         source: '',
         keyword: '',
-        function: '',
+        function: '全部',
         time: [],
         pageNum: 1,
         pageSize: 20,

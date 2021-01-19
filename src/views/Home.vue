@@ -22,13 +22,13 @@
         </div>
         <div class="handle">
           <h2 class="list-head">最新投稿</h2>
-          <div class="handle-contribute"
-              @mouseenter="StopSwiper"
-              @mouseleave="UpSwiper">
+          <div class="handle-contribute">
             <swiper ref="mySwiper"
+                    @mouseenter="StopSwiper"
+                    @mouseleave="UpSwiper"
                     :options="swiperOptions"
                     class="swiper-box"
-                    v-if="this.articleData.length > 0">
+                    v-if="this.articleData.length > 7">
               <swiper-slide v-for="(item, index) of articleData" :key="index">
                 <el-tooltip :content="item.articleTitle"
                             placement="top"
@@ -40,6 +40,16 @@
               <div class="swiper-button-prev" slot="button-prev"></div>
               <div class="swiper-button-next" slot="button-next"></div>
             </swiper>
+            <ul v-else class="swip-ul">
+              <li v-for="(item, index) of articleData" :key="index">
+                <el-tooltip :content="item.articleTitle"
+                            placement="top"
+                            v-if="item.articleTitle.length > 20">
+                  <p>{{index + 1}}、<a @click="toArticle(item.id)" v-html="item.articleTitle"></a></p>
+                </el-tooltip>
+                <p v-else>{{index + 1}}、<a @click="toArticle(item.id)" v-html="item.articleTitle"></a></p>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -476,17 +486,17 @@ export default {
   position: static;
   --swiper-navigation-size: 24px;
 }
-.swiper-box .swiper-slide p {
+.swiper-box .swiper-slide p, .swip-ul li p {
   height: 40px;
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.swiper-box .swiper-slide a {
+.swiper-box .swiper-slide a, .swip-ul li a {
   color: #1f90e5;
 }
-.swiper-box .swiper-slide a:hover {
+.swiper-box .swiper-slide a:hover, .swip-ul li a:hover {
   text-decoration: underline;
 }
 .swiper-box .swiper-button-prev, .swiper-button-next {

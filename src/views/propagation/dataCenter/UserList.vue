@@ -266,7 +266,7 @@ export default {
       accountfrom: {
         districts: [],
         keyword: '',
-        function: '',
+        function: '全部',
         cid: 1,
         publishTime: [],
         sortDirection: '',

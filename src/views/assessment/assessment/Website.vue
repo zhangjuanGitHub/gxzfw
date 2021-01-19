@@ -214,7 +214,7 @@ export default {
       functionList: [], // 职能
       region: [], // 地区
       ruleForm: {
-        function: '',
+        function: '全部',
         region: '',
         keyword: '', // 关键字
         pageNum: 1,

@@ -5,13 +5,12 @@
         <h2>微信考核设置</h2>
         <div class="input-box">
           <p>月榜</p>
-          <p>文章数x<el-input v-model="wxSettings.artNumWeight"></el-input>%</p>
-          <p>发布次数x<el-input v-model="wxSettings.pubNumWeight"></el-input>%</p>
-          <p>平均阅读数x<el-input v-model="wxSettings.aveReadNumWeight"></el-input>%</p>
-          <p>最高阅读数x<el-input v-model="wxSettings.maxReadNumWeight"></el-input>%</p>
-          <p>平均点赞数x<el-input v-model="wxSettings.aveDzWeight"></el-input>%</p>
-          <p>最高点赞数x<el-input type="text"
-                      v-model="wxSettings.highestDzWeight"></el-input>%</p>
+          <p>文章数x<el-input v-model.number="wxSettings.artNumWeight"></el-input>%</p>
+          <p>发布次数x<el-input v-model.number="wxSettings.pubNumWeight"></el-input>%</p>
+          <p>平均阅读数x<el-input v-model.number="wxSettings.aveReadNumWeight"></el-input>%</p>
+          <p>最高阅读数x<el-input v-model.number="wxSettings.maxReadNumWeight"></el-input>%</p>
+          <p>平均点赞数x<el-input v-model.number="wxSettings.aveDzWeight"></el-input>%</p>
+          <p>最高点赞数x<el-input v-model.number="wxSettings.highestDzWeight"></el-input>%</p>
           <el-button type="primary"
                      size="small"
                      @click="saveDatas('wxSettings')">保存</el-button>
@@ -22,12 +21,11 @@
         <div class="input-box">
           <p>月榜</p>
           <p>粉丝数x<el-input v-model.number="wbSettings.fansNumWeight"></el-input>%</p>
-          <p>发布次数x<el-input v-model="wbSettings.pubNumWeight"></el-input>%</p>
-          <p>原创数x<el-input v-model="wbSettings.originalNumWeight"></el-input>%</p>
-          <p>评论数x<el-input v-model="wbSettings.pinglunNumWeight"></el-input>%</p>
+          <p>发布次数x<el-input v-model.number="wbSettings.pubNumWeight"></el-input>%</p>
+          <p>原创数x<el-input v-model.number="wbSettings.originalNumWeight"></el-input>%</p>
+          <p>评论数x<el-input v-model.number="wbSettings.pinglunNumWeight"></el-input>%</p>
           <p>转发数x<el-input v-model.number="wbSettings.zhuanfaNumWeight"></el-input>%</p>
-          <p>点赞数x<el-input type="text"
-                      v-model.number="wbSettings.dianzanNumWeight"></el-input>%</p>
+          <p>点赞数x<el-input v-model.number="wbSettings.dianzanNumWeight"></el-input>%</p>
           <el-button type="primary"
                      size="small"
                      @click="saveDatas('wbSettings')">保存</el-button>
@@ -53,11 +51,11 @@
         <h2>今日头条考核设置</h2>
         <div class="input-box">
           <p>月榜</p>
-          <p>评论数x<el-input v-model="ttSettings.pinglunNumWeight"></el-input>%</p>
-          <p>阅读数x<el-input v-model="ttSettings.readNumWeight"></el-input>%</p>
-          <p>粉丝数x<el-input v-model="ttSettings.fansWeight"></el-input>%</p>
-          <p>发布数x<el-input v-model="ttSettings.publishWeight"></el-input>%</p>
-          <p>点赞数x<el-input v-model="ttSettings.dianzanNumWeight"></el-input>%</p>
+          <p>评论数x<el-input v-model.number="ttSettings.pinglunNumWeight"></el-input>%</p>
+          <p>阅读数x<el-input v-model.number="ttSettings.readNumWeight"></el-input>%</p>
+          <p>粉丝数x<el-input v-model.number="ttSettings.fansWeight"></el-input>%</p>
+          <p>发布数x<el-input v-model.number="ttSettings.publishWeight"></el-input>%</p>
+          <p>点赞数x<el-input v-model.number="ttSettings.dianzanNumWeight"></el-input>%</p>
           <el-button type="primary"
                      size="small"
                      @click="saveDatas('ttSettings')">保存</el-button>
@@ -156,7 +154,7 @@ export default {
         maxReadNumWeight: 0, // 最高阅读数权重
         aveDzWeight: 0, // 平均点赞数权重
         highestDzWeight: 0, // 最高点赞数权重
-        version: 0
+        version: 1
       },
       wbSettings: {
         fansNumWeight: 0,
@@ -165,12 +163,15 @@ export default {
         pinglunNumWeight: 0,
         zhuanfaNumWeight: 0,
         dianzanNumWeight: 0,
-        version: 0
+        version: 1
       },
       ttSettings: {
         pinglunNumWeight: 0,
         readNumWeight: 0,
-        version: 0
+        fansWeight: 0,
+        publishWeight: 0,
+        dianzanNumWeight: 0,
+        version: 1
       },
       maaList: {
         id: '',

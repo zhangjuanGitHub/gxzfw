@@ -64,6 +64,7 @@ export default {
       ruleForm: {
         source: 4,
         keyword: '',
+        function: '全部',
         time: [],
         pageNum: 1,
         pageSize: 20,

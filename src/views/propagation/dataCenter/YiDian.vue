@@ -199,7 +199,7 @@ export default {
       ismodal: false, // 遮罩
       centerList: [],
       form: {
-        function: '',
+        function: '全部',
         districts: [],
         keyword: '',
         cid: 1,

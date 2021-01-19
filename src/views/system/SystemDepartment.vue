@@ -68,10 +68,8 @@
                   <el-table ref="multipleTable"
                             v-if="isTable"
                             :data="tableList"
-                            default-expand-all
                             border
                             row-key="id"
-                            :expand-row-keys="[expends]"
                             :tree-props="{children: 'childList', hasChildren: 'hasChildren'}"
                             style="width: 100%"
                             @selection-change="handleSelectionChange">
@@ -148,7 +146,7 @@ export default {
   name: 'SystemDepartment',
   data () {
     return {
-      expends: '',
+      // expends: '',
       treeFirstDataId: '',
       isTable: false,
       params: {
@@ -284,7 +282,7 @@ export default {
             this.dataLess = true
           }
           this.tableList.push(...datas)
-          this.expends = String(this.tableList[0].id)
+          // this.expends = String(this.tableList[0].id)
         })
         .catch(() => {
         })

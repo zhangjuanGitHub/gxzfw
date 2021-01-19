@@ -5,7 +5,7 @@
       <div class="header-title-div">
         <div id="logo-box">
           <img id="logo"
-               :src="require('@/assets/images/guijian.png')"
+               :src="require('@/assets/images/zfw.png')"
                @click="toHome">
           <p class="title-list">
             <span class="website-name"
@@ -283,9 +283,9 @@ export default {
   color: #fff;
   background: linear-gradient(
     0deg,
-    rgb(240, 157, 119),
-    rgb(218, 114, 16),
-    rgb(220, 70, 0)
+    rgb(161, 152, 240),
+    rgb(102, 72, 212),
+    rgb(62, 29, 209)
   );
 }
 .header-title-wrap {
@@ -331,7 +331,7 @@ export default {
   background: transparent;
 }
 .header-wrap .icon-box {
-  background: #b75607;
+  background: #9f9ee9;
   display: flex;
   align-items: center;
   padding: 0 18px;
@@ -357,6 +357,7 @@ export default {
   display: flex;
   align-items: center;
   min-width: 15%;
+  margin-left: 20px;
 }
 .team-img {
   margin: 0 15px 0 0;
@@ -374,6 +375,7 @@ export default {
   display: flex;
   width: 190px;
   position: relative;
+  margin-right: 20px;
 }
 .header-wrap .title-list {
   font-size: 18px;

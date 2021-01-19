@@ -30,7 +30,7 @@
                         placeholder="请输入角色名称"
                         v-model="roleName"></el-input>
             </div>
-            <div class="admin-role-name">
+            <!-- <div class="admin-role-name">
               <p class="role-p">
                 <span>APP角色</span>
               </p>
@@ -40,7 +40,7 @@
                 <el-option label="舆情员" value="3">舆情员</el-option>
                 <el-option label="普通用户" value="4">普通用户</el-option>
               </el-select>
-            </div>
+            </div> -->
             <!--    <div class="admin-role-name">-->
             <!--      <p class="role-p">-->
             <!--        <span>是否公开</span>-->

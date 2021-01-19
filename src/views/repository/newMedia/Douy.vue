@@ -174,7 +174,7 @@ export default {
         pageNum: 1, // 页码
         pageSize: 20,
         keyword: '',
-        function: '',
+        function: '全部',
         sortDirection: 'desc', // 排序顺序 desc
         sortField: 'digg_count', // 0时间，1阅读，2转发
         optionSort: ['digg_count', 'dianzanDo']

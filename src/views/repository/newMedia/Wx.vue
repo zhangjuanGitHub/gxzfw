@@ -195,7 +195,7 @@ export default {
       ruleForm: {
         cid: '', // 栏目id
         region: '', // 地区
-        function: '',
+        function: '全部',
         startDate: '', // 开始时间
         endDate: '', // 结束时间
         organization: '', // 职能

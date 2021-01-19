@@ -19,7 +19,7 @@
                           class="date-search">
           </el-date-picker>
         </el-form-item>
-        <el-form-item label="职能"
+        <!-- <el-form-item label="职能"
                       prop="function">
           <el-select v-model="ruleForm.function"
                     size="small"
@@ -30,7 +30,7 @@
                       :value="item"
                       :key="index"></el-option>
           </el-select>
-        </el-form-item>
+        </el-form-item> -->
         <el-form-item prop="keyword" label="关键字">
           <el-input v-model="ruleForm.keyword"
                     size="small"
@@ -105,7 +105,6 @@ export default {
   name: 'Inspect',
   data () {
     return {
-      functionList: [],
       inspectList: [],
       dataLess: false,
       dataNull: false,
@@ -136,7 +135,6 @@ export default {
       ruleForm: {
         cid: '', // 栏目id
         keyword: '', // 搜索关键字
-        function: '',
         region: '', // 地区
         startDate: '', // 开始时间
         endDate: '', // 结束时间
@@ -257,20 +255,11 @@ export default {
       start.setTime(start.getTime() - 3600 * 1000 * 24 * 7)
       this.ruleForm.timeRange[0] = moment(start).format('YYYY-MM-DD')
       this.ruleForm.timeRange[1] = moment(end).format('YYYY-MM-DD')
-    },
-    // 获取职能
-    getShowFunction () {
-      this.$http.get(this.$api.showFunction)
-        .then(res => {
-          this.functionList = res.data.data
-        })
-        .catch(() => { })
     }
   },
   created () {
     this.getWeek()
     this.getList()
-    this.getShowFunction()
   },
   components: {
     // eslint-disable-next-line vue/no-unused-components

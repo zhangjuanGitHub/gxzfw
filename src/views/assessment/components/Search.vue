@@ -74,7 +74,7 @@ export default {
       getMapVal: '',
       region: [], // 地区
       ruleForm: {
-        function: '',
+        function: '全部',
         region: '',
         time: '',
         pageNum: 1,

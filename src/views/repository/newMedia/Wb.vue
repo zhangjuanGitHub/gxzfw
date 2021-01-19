@@ -203,7 +203,7 @@ export default {
       ruleForm: {
         cid: '', // 栏目id
         keyword: '', // 搜索关键字
-        function: '',
+        function: '全部',
         region: '', // 地区
         startDate: '', // 开始时间
         endDate: '', // 结束时间

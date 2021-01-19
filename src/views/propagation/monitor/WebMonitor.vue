@@ -247,7 +247,7 @@ export default {
       options: [], // 频道选择
       tableData: [],
       from: {
-        id: 1,
+        id: 98,
         publishTime: []
       },
       artucleYuan: '',
@@ -714,7 +714,7 @@ export default {
       const start = new Date()
       start.setTime(start.getTime() - 3600 * 1000 * 24 * 60)
       let params = {
-        id: 1,
+        id: 98,
         publishTime: [this.timestampToTime(start), this.timestampToTime(end)]
       }
       this.$http.post(this.$api.totalDataByDate, params)

@@ -115,11 +115,11 @@
             <p class="font18">单位列表</p>
           </div>
           <div class="tree-box">
+            <!-- :default-expanded-keys="[1]" -->
             <el-tree :data="treeData"
                      :props="defaultProps"
                      node-key="value"
                      :expand-on-click-node="false"
-                     :default-expanded-keys="[1]"
                      @node-click="handleNodeClick"></el-tree>
           </div>
         </div>

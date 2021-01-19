@@ -161,7 +161,7 @@ export default {
       centerdouyin: [],
       functionList: [],
       form: {
-        function: '',
+        function: '全部',
         districts: [],
         keyword: '',
         cid: 1,

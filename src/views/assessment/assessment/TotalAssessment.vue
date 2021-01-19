@@ -6,9 +6,7 @@
         <el-table-column prop="rank"
                          label="排名"
                          width="65">
-          <template slot-scope="scope">
-            {{scope.$index + 1}}
-          </template>
+          <template slot-scope="scope">{{scope.$index + 1}}</template>
         </el-table-column>
         <el-table-column prop="departmentName"
                          label="单位"

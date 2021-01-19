@@ -27,10 +27,10 @@
                   <p><span class="admin-title-span">单位列表</span></p>
                 </div>
                 <div class="tree-box">
+                  <!-- :default-expanded-keys="[1]" -->
                   <el-tree :data="treeData"
                           :props="defaultProps"
                           node-key="value"
-                          :default-expanded-keys="[1]"
                           :expand-on-click-node="false"
                           @node-click="handleNodeClick"></el-tree>
                 </div>

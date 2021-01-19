@@ -195,7 +195,7 @@ export default {
       ruleForm: {
         date: [], // 时间
         keyword: '', // 搜索关键字
-        function: '',
+        function: '全部',
         level: '1', // 微信
         pageNum: 1, // 分页
         pageSize: 20,
