@@ -28,7 +28,7 @@
                     @mouseleave="UpSwiper"
                     :options="swiperOptions"
                     class="swiper-box"
-                    v-if="this.articleData.length > 7">
+                    v-if="this.articleData.length >= 7">
               <swiper-slide v-for="(item, index) of articleData" :key="index">
                 <el-tooltip :content="item.articleTitle"
                             placement="top"
@@ -40,7 +40,7 @@
               <div class="swiper-button-prev" slot="button-prev"></div>
               <div class="swiper-button-next" slot="button-next"></div>
             </swiper>
-            <ul v-else class="swip-ul">
+            <ul v-else-if="this.articleData.length > 0 && this.articleData.length < 7" class="swip-ul">
               <li v-for="(item, index) of articleData" :key="index">
                 <el-tooltip :content="item.articleTitle"
                             placement="top"
@@ -49,6 +49,9 @@
                 </el-tooltip>
                 <p v-else>{{index + 1}}、<a @click="toArticle(item.id)" v-html="item.articleTitle"></a></p>
               </li>
+            </ul>
+            <ul v-else class="flex-ali">
+              <li><p>还没有最新投稿哦~</p></li>
             </ul>
           </div>
         </div>
@@ -522,6 +525,12 @@ export default {
 }
 </style>
 <style lang="scss" scoped>
+.flex-ali {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .contribution-right{
   width: 1000px;
   height: 260px;

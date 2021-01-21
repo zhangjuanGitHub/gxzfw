@@ -37,11 +37,11 @@
                           v-else>
               大数据中心
             </el-menu-item>
-            <el-menu-item index="opinion"
+            <!-- <el-menu-item index="opinion"
                           @click="blankUrl"
                           v-permission="9">
               舆情监测
-            </el-menu-item>
+            </el-menu-item> -->
             <el-menu-item index="assessment"
                           v-permission="5">
               管理与考核
@@ -290,7 +290,7 @@ export default {
 }
 .header-title-wrap {
   display: flex;
-  max-width: 1440px;
+  max-width: 1280px;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
@@ -300,7 +300,7 @@ export default {
   height: 60px;
   display: flex;
   align-items: center;
-  // flex: 1;
+  flex: 1;
 }
 .el-menu.el-menu--horizontal {
   border: none;
@@ -357,7 +357,6 @@ export default {
   display: flex;
   align-items: center;
   min-width: 15%;
-  margin-left: 20px;
 }
 .team-img {
   margin: 0 15px 0 0;
@@ -375,7 +374,6 @@ export default {
   display: flex;
   width: 190px;
   position: relative;
-  margin-right: 20px;
 }
 .header-wrap .title-list {
   font-size: 18px;
