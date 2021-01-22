@@ -214,7 +214,7 @@ export default {
       functionList: [], // 职能
       region: [], // 地区
       ruleForm: {
-        function: '全部',
+        function: '政法委',
         region: '',
         keyword: '', // 关键字
         pageNum: 1,

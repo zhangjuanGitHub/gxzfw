@@ -3,7 +3,7 @@
     <!--    <svg-icon icon-class="account"></svg-icon>-->
     <div class="form-wrap login">
       <div class="logo-title">
-        <img :src="require('@/assets/images/zfw.png')">
+        <img :src="require('@/assets/images/logo-a.png')">
         <p class="system-name">
           {{getCaptchaInfo.websiteName}}
         </p>

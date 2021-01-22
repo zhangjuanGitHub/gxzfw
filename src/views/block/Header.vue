@@ -5,7 +5,7 @@
       <div class="header-title-div">
         <div id="logo-box">
           <img id="logo"
-               :src="require('@/assets/images/zfw.png')"
+               :src="require('@/assets/images/logo-a.png')"
                @click="toHome">
           <p class="title-list">
             <span class="website-name"
@@ -37,11 +37,11 @@
                           v-else>
               大数据中心
             </el-menu-item>
-            <!-- <el-menu-item index="opinion"
+            <el-menu-item index="opinion"
                           @click="blankUrl"
                           v-permission="9">
               舆情监测
-            </el-menu-item> -->
+            </el-menu-item>
             <el-menu-item index="assessment"
                           v-permission="5">
               管理与考核

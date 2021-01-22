@@ -196,7 +196,7 @@ export default {
     return {
       dataLess: false,
       ruleForm: {
-        function: '全部',
+        function: '政法委',
         region: '',
         time: '',
         pageNum: 1,
@@ -219,6 +219,7 @@ export default {
       totalRule: {
         id: '',
         time: '',
+        function: '政法委',
         pageNum: 1,
         pageSize: 30
       }

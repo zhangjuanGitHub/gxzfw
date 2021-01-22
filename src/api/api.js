@@ -485,10 +485,10 @@ export default {
   updateMaterial: '/media/comment/task/updateMaterial', // POST 口径库修改
   findCountTask: '/media/comment/task/findCountTask', // POST 考核列表
   findUserName: '/media/comment/task/findUserName', // POST 获取承办人列表
-  // importMaterial: window.g.baseUrl + '/media/comment/task/importMaterial', // 口径库导入模板
-  importMaterial: 'http://192.168.10.13:29998/gxjcy/media/comment/task/importMaterial', // 口径库导入模板
-  // importAddress: window.g.baseUrl + '/media/comment/task/importAddress', // 辅助处置管理员导入模板
-  importAddress: 'http://192.168.10.13:29998/gxjcy/media/comment/task/importAddress', // 辅助处置管理员导入模板
+  importMaterial: window.g.baseUrl + '/media/comment/task/importMaterial', // 口径库导入模板
+  // importMaterial: 'http://192.168.10.13:29998/gxjcy/media/comment/task/importMaterial', // 口径库导入模板
+  importAddress: window.g.baseUrl + '/media/comment/task/importAddress', // 辅助处置管理员导入模板
+  // importAddress: 'http://192.168.10.13:29998/gxjcy/media/comment/task/importAddress', // 辅助处置管理员导入模板
   getAddress: window.g.baseUrl + '/media/comment/task/getAddress', // GET 下载辅助处置管理员模板
   getMaterial: window.g.baseUrl + '/media/comment/task/getMaterial', // GET 下载口径库模板
   mergeChunkUpload: '/media/upload/mergeChunkUpload', // 合并接口

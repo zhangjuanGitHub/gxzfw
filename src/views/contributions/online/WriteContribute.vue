@@ -95,7 +95,7 @@ export default {
         // 如果需要上传功能,找后端小伙伴要服务器接口地址
         serverUrl: window.g.baseUrl + '/media/ueditor/config',
         // 你的UEditor资源存放的路径,相对于打包后的index.html
-        UEDITOR_HOME_URL: window.g.baseRoute + '/gxjcy/ueditor/',
+        UEDITOR_HOME_URL: window.g.baseRoute + '/gxzfw/ueditor/',
         // 编辑器自动被内容撑高
         autoHeightEnabled: false,
         // 初始容器高度
@@ -127,7 +127,7 @@ export default {
           title: '秀米',
           onclick: function () {
             var dialog = new window.UE.ui.Dialog({
-              iframeUrl: window.g.baseRoute + '/gxjcy/ueditor/xiumi-ue-dialog-v5.html',
+              iframeUrl: window.g.baseRoute + '/gxzfw/ueditor/xiumi-ue-dialog-v5.html',
               editor: editor,
               name: 'xiumi-connect',
               title: '秀米图文消息助手',

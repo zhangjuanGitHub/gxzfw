@@ -74,7 +74,7 @@ export default {
       getMapVal: '',
       region: [], // 地区
       ruleForm: {
-        function: '全部',
+        function: '政法委',
         region: '',
         time: '',
         pageNum: 1,
@@ -83,6 +83,7 @@ export default {
       totalRule: {
         id: '',
         time: '',
+        function: '政法委',
         pageNum: 1,
         pageSize: 30
       },
@@ -91,7 +92,8 @@ export default {
   },
   methods: {
     resetForm () {
-      this.ruleForm.function = '全部'
+      this.ruleForm.function = '政法委'
+      this.totalRule.function = '政法委'
       this.ruleForm.region = ''
       this.ruleForm.pageNum = 1
       this.totalRule.pageNum = 1
@@ -100,7 +102,7 @@ export default {
     },
     // 搜索
     searchList () {
-      this.totalRule.time = this.ruleForm.time
+      this.totalRule = this.ruleForm
       this.showTotal = false
       let row = {
         form: this.ruleForm,
@@ -110,6 +112,7 @@ export default {
     },
     getTotalRank () {
       this.showTotal = true
+      this.totalRule = this.ruleForm
       let row = {
         form: this.totalRule,
         show: this.showTotal
